@@ -37,6 +37,7 @@
 
     methods: {
       clickHandle (e) {
+        console.log(e)
         this.$emit('click', e)
         if (!this.to) return
         if (this.router && this.$router) {
