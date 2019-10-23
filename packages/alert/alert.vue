@@ -1,6 +1,6 @@
 <template>
   <transition name="h-alert-fade">
-    <div class="h-alert" 
+    <div class="h-alert"
       :class="[
         closeable ? 'h-alert-closeable' : '',
         semantic ? `h-alert-semantic-${semantic}` : '',
@@ -12,7 +12,7 @@
       <span v-show="closeable" @click="close">×</span>
       <slot></slot>
     </div>
-  </transition>  
+  </transition>
 </template>
 <script>
   export default {
@@ -39,3 +39,4 @@
     }
   }
 </script>
+<!-- 代码测试 -->

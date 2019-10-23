@@ -34,7 +34,9 @@
       router: Boolean,
       to: String
     },
-
+    mounted () {
+      console.log('\x1B[32m%s\x1B[0m', '测试提交')
+    },
     methods: {
       clickHandle (e) {
         this.$emit('click', e)
