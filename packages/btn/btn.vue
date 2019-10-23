@@ -1,12 +1,12 @@
 <template>
-  <button 
-    class="h-btn" 
+  <button
+    class="h-btn"
     :class="[
       semantic ? `h-btn-semantic-${semantic}` : '',
       shadow ? 'h-btn-shadow' : '',
       radius ? `h-btn-radius-${radius}` : '' ,
       size ? `h-btn-size-${size}` : ''
-    ]" 
+    ]"
 
     :type="type"
     :autofocus="autofocus"
@@ -37,7 +37,6 @@
 
     methods: {
       clickHandle (e) {
-        console.log(e)
         this.$emit('click', e)
         if (!this.to) return
         if (this.router && this.$router) {

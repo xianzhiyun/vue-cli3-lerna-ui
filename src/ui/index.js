@@ -1,33 +1,33 @@
 /* 布局 */
-import Row from '@ziyi2/row'
-import Col from '@ziyi2/col'
+import Row from '@vt/row'
+import Col from '@vt/col'
 
 /* 基础组件 */
-import Quote from '@ziyi2/quote'
-import Code from '@ziyi2/code'
-import  { Btn, BtnGroup } from '@ziyi2/button/index'
-import { Table, TableColumn } from '@ziyi2/table'
-import Pagination from '@ziyi2/pagination'
-import { Radio, RadioBtn, RadioGroup } from '@ziyi2/radio'
-import { Checkbox, CheckboxBtn, CheckboxGroup } from '@ziyi2/checkbox'
-import Select from '@ziyi2/select'
-import Input from '@ziyi2/input'
-import Alert from '@ziyi2/alert'
-import Tooltip from '@ziyi2/tooltip'
-import { Tag, TagGroup } from '@ziyi2/tag'
-import Snackbar from '@ziyi2/snackbar'
-import Toast from '@ziyi2/toast'
+import Quote from '@vt/quote'
+import Code from '@vt/code'
+import  { Btn, BtnGroup } from '@vt/button/index'
+import { Table, TableColumn } from '@vt/table'
+import Pagination from '@vt/pagination'
+import { Radio, RadioBtn, RadioGroup } from '@vt/radio'
+import { Checkbox, CheckboxBtn, CheckboxGroup } from '@vt/checkbox'
+import Select from '@vt/select'
+import Input from '@vt/input'
+import Alert from '@vt/alert'
+import Tooltip from '@vt/tooltip'
+import { Tag, TagGroup } from '@vt/tag'
+import Snackbar from '@vt/snackbar'
+import Toast from '@vt/toast'
 
 /* 弹框 */
-import Poper from '@ziyi2/poper'
-import Dialog from '@ziyi2/dialog'
+import Poper from '@vt/poper'
+import Dialog from '@vt/dialog'
 
 /* 复合组件 */
-import { Dropdown, DropdownItem } from '@ziyi2/dropdown'
-import { Nav, NavItem } from '@ziyi2/nav'
+import { Dropdown, DropdownItem } from '@vt/dropdown'
+import { Nav, NavItem } from '@vt/nav'
 
 /* 动画 */
-import Particle from '@ziyi2/particle'
+import Particle from '@vt/particle'
 
 const components = [
   Row,

@@ -1,9 +1,9 @@
 {
- "name": "@ziyi2/locale",
+ "name": "@vt/locale",
  "version": "1.0.2",
  "description": "",
  "main": "index.js",
- "author": "",
+ "author": "zhangle",
  "license": "ISC",
  "dependencies": {
   "deepmerge": "^1.5.2"

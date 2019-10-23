@@ -1,8 +1,8 @@
 {
-  "name": "@ziyi2/quote",
+  "name": "@vt/quote",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
-  "author": "ziyi2",
+  "author": "zhangle",
   "license": "ISC"
 }

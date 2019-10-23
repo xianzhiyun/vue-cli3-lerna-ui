@@ -24,9 +24,9 @@
   </transition> 
 </template>
 <script>
-  import clickout from '@ziyi2/utils/clickout'
-  import scroll from '@ziyi2/utils/scroll'
-  import screen from '@ziyi2/utils/screen'
+  import clickout from '@vt/utils/clickout'
+  import scroll from '@vt/utils/scroll'
+  import screen from '@vt/utils/screen'
 
   export default {
     name: 'HNav',

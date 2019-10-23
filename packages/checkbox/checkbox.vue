@@ -24,7 +24,7 @@
   </label>
 </template>
 <script>
-  import Emit from '@ziyi2/utils/emit'
+  import Emit from '@vt/utils/emit'
 
   export default {
     name: 'HCheckbox',

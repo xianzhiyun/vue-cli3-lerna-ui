@@ -22,10 +22,10 @@
   </div>
 </template>
 <script>
-  import clickout from '@ziyi2/utils/clickout'
-  import background from '@ziyi2/utils/background'
-  import dom from '@ziyi2/utils/dom'
-  import scroll from '@ziyi2/utils/scroll'
+  import clickout from '@vt/utils/clickout'
+  import background from '@vt/utils/background'
+  import dom from '@vt/utils/dom'
+  import scroll from '@vt/utils/scroll'
 
   export default {
     name: 'HDropdown',

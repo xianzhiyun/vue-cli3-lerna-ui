@@ -1,9 +1,9 @@
 
-import tooltip from '@ziyi2/utils/tooltip'
-import vnode from '@ziyi2/utils/vnode'
+import tooltip from '@vt/utils/tooltip'
+import vnode from '@vt/utils/vnode'
 import Vue from 'vue'
 import { setTimeout, clearTimeout } from 'timers'
-import dom from '@ziyi2/utils/dom'
+import dom from '@vt/utils/dom'
 
 export default {
   name: 'HPoper',

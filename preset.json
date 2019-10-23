@@ -10,8 +10,8 @@
     "@vue/cli-plugin-eslint": {
       "lintOn": ["save", "commit"]
     },
-    "@ziyi2/vue-cli-plugin-ui-base": {},
-    "@ziyi2/vue-cli-plugin-ui-cz": {},
-    "@ziyi2/vue-cli-plugin-ui-lint": {}
+    "@vt/vue-cli-plugin-ui-base": {},
+    "@vt/vue-cli-plugin-ui-cz": {},
+    "@vt/vue-cli-plugin-ui-lint": {}
   }
 }

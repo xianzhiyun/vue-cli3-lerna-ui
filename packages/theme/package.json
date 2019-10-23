@@ -1,12 +1,12 @@
 {
-  "name": "@ziyi2/theme",
+  "name": "@vt/theme",
   "version": "1.0.2",
   "description": "",
   "main": "lib/index.css",
   "scripts": {
     "lib": "gulp less"
   },
-  "author": "ziyi2",
+  "author": "zhangle",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.0",
