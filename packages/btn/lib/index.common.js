@@ -156,7 +156,6 @@ var staticRenderFns = []
   },
 
   mounted() {
-    console.log('\x1B[32m%s\x1B[0m', '测试提交');
   },
 
   methods: {
@@ -174,7 +173,7 @@ var staticRenderFns = []
   }
 });
 // CONCATENATED MODULE: ./btn.vue?vue&type=script&lang=js&
- /* harmony default export */ var btnvue_type_script_lang_js_ = (lib_vue_loader_options_btnvue_type_script_lang_js_); 
+ /* harmony default export */ var btnvue_type_script_lang_js_ = (lib_vue_loader_options_btnvue_type_script_lang_js_);
 // CONCATENATED MODULE: D:/vt/vue-cli3-lerna-ui/node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -286,7 +285,7 @@ var component = normalizeComponent(
   null,
   null,
   null
-  
+
 )
 
 /* harmony default export */ var btn = (component.exports);
@@ -325,7 +324,7 @@ var lib_vue_loader_options_btn_groupvue_type_template_id_d1b329be_staticRenderFn
   }
 });
 // CONCATENATED MODULE: ./btn-group.vue?vue&type=script&lang=js&
- /* harmony default export */ var btn_groupvue_type_script_lang_js_ = (lib_vue_loader_options_btn_groupvue_type_script_lang_js_); 
+ /* harmony default export */ var btn_groupvue_type_script_lang_js_ = (lib_vue_loader_options_btn_groupvue_type_script_lang_js_);
 // CONCATENATED MODULE: ./btn-group.vue
 
 
@@ -342,7 +341,7 @@ var btn_group_component = normalizeComponent(
   null,
   null,
   null
-  
+
 )
 
 /* harmony default export */ var btn_group = (btn_group_component.exports);
