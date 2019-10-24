@@ -1,10 +1,12 @@
 <template>
 	<div>
+		<!-- 搜索组件 -->
 		<h-search
 			:searchList=searchList
 			@searchData="getTableList"
 			@reset="reset"
 		></h-search>
+		<!-- 表格组件 -->
 		<h-table
 			:tableConfig="tableConfig"
 			@onSizeChange="onSizeChange"
@@ -24,39 +26,18 @@ export default {
         HTable,
         HSearch
     },
-    data () {
-        return {
-            // 搜索配置项
-            searchList: [
-                {label: '编号', key: 'no',value: null, type: 'INPUT'}
-            ],
-            // 表格table数据配置项的
-            tableConfig: {
-                loading: false,
-                // 表格数据
-                data: [
-                    {part: '测试数据'}
-                ],
-                // 列配置
-                columns: [
-                    {
-                        label: 'id',
-                        prop: 'id',
-                        'min-width': 140
-                    },
-                    {
-                        label: 'no',
-                        prop: 'no',
-                        'min-width': 140
-                    }
-                ],
-                pagination: {
-                    total: 0, // 总页数
-                    'page-size': 10,
-                    'current-page': 1
-                }
-            }
+	props: {
+        searchList: {
+            type: Array,
+            default: () => []
+        },
+        tableConfig: {
+            type: Object,
+            required: true
         }
+	},
+    data () {
+        return {}
     },
     mounted () {
         // 第一次进行触发搜索
