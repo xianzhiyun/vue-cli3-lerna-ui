@@ -1,18 +1,18 @@
 <template>
 	<div>
-		<vt-search :searchList=searchList></vt-search>
+		<h-search :searchList=searchList></h-search>
 		<h-table :tableConfig="tableConfig"></h-table>
 	</div>
 </template>
 <script>
 import HTable from '@vt/table/table.vue'
-import VtSearch from '@vt/search/search.vue'
+import HSearch from '@vt/search/search.vue'
 
 export default {
     name: 'HTableBc',
     components: {
         HTable,
-        VtSearch
+        HSearch
     },
     data () {
         return {

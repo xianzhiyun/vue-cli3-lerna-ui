@@ -86,7 +86,7 @@
  * 用于普通表格页面搜索，不展开情况
  */
 export default {
-    name: 'VtSearch',
+    name: 'HSearch',
     props: {
         searchList: {
             type: Array,
