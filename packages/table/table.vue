@@ -132,10 +132,10 @@ export default {
             // 项目分页默认属性
             let defaultAttr = {
                 background: true,
-                'page-sizes': [20, 50, 100, 200],
+                'page-sizes': [10, 20, 50, 100, 200],
                 layout: 'prev, pager, next,sizes,jumper',
                 'current-page': 1,
-                'page-size': 20
+                'page-size': 10
             }
             let attr = Object.assign(defaultAttr, this.tableConfig.pagination)
             return attr

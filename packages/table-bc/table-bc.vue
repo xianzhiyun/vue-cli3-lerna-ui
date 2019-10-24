@@ -2,7 +2,7 @@
 	<div>
 		<h-search
 			:searchList=searchList
-			@searchData="searchData"
+			@searchData="getTableList"
 			@reset="reset"
 		></h-search>
 		<h-table
@@ -19,8 +19,6 @@ import axios from 'axios'
 
 export default {
     name: 'HTableBc',
-    // 组件将不会把未被注册的props呈现为普通的HTML属性
-    // 不会在组件最外层div设置属性
     inheritAttrs: false,
     components: {
         HTable,
@@ -30,14 +28,14 @@ export default {
         return {
             // 搜索配置项
             searchList: [
-                {label: '姓名', value: null, type: 'INPUT', key: 'person'}
+                {label: '编号', key: 'no',value: null, type: 'INPUT'}
             ],
             // 表格table数据配置项的
             tableConfig: {
                 loading: false,
                 // 表格数据
                 data: [
-                    {part: '主轴齿轮箱润滑'}
+                    {part: '测试数据'}
                 ],
                 // 列配置
                 columns: [
@@ -62,18 +60,19 @@ export default {
     },
     mounted () {
         // 第一次进行触发搜索
-        this.searchData()
+        this.getTableList()
     },
     methods: {
         /**
          * @method 搜索
          */
-        searchData () {
-            this.getTableList()
-        },
-        getTableList () {
+        getTableList (val,type) {
             this.tableConfig.loading = true
+            if (type === 'search') {
+                this.tableConfig.pagination['current-page'] =  1
+            }
             let params = {
+                ...val,
                 pageNum: this.tableConfig.pagination['current-page'],
                 pageSize: this.tableConfig.pagination['page-size']
             }
@@ -96,13 +95,17 @@ export default {
         /**
          * @method 重置
          * */
-        reset () {},
+        reset () {
+            this.getTableList({}, 'reset')
+            this.tableConfig.pagination['current-page'] =  1
+		},
         onCurrentChange (val) {
             this.tableConfig.pagination['current-page'] = val
-            this.getTableList()
+            this.getTableList({}, 'reset')
         },
         onSizeChange (val) {
             this.tableConfig.pagination['page-size'] = val
+            this.tableConfig.pagination['current-page'] =  1
             this.getTableList()
         }
     }

@@ -125,7 +125,7 @@ export default {
             this.searchList.map(item => {
                 obj[item.key] = item.value
             })
-            this.$emit('searchData', obj, 'searchBtn')
+            this.$emit('searchData', obj, 'search')
         },
         searchClickA () {
             let obj = {}
