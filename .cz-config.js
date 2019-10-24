@@ -27,8 +27,7 @@ module.exports = {
   ],
 
   scopes: [
-    { name: '@vt' },
-    { name: '@vt/button' }
+    { name: '@vt' }
   ],
 
   allowTicketNumber: false,

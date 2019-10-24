@@ -1,0 +1,8 @@
+{
+  "name": "@vt/table-bc",
+  "version": "1.0.4",
+  "description": "业务组件",
+  "main": "index.js",
+  "author": "zhangle",
+  "license": "ISC"
+}

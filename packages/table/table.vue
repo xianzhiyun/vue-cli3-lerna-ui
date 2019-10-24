@@ -82,9 +82,9 @@
 import Methods from './tableMehods'
 
 export default {
-    name: 'HTable',
     // 组件将不会把未被注册的props呈现为普通的HTML属性
     inheritAttrs: false,
+    name: 'HTable',
     props: {
         tableConfig: {
             type: Object,

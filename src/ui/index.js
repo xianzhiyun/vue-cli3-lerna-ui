@@ -5,8 +5,10 @@ import Col from '@vt/col'
 /* 基础组件 */
 import Quote from '@vt/quote'
 import Code from '@vt/code'
-import  { Btn, BtnGroup } from '@vt/button/index'
-import { Table, TableColumn } from '@vt/table'
+import  { Btn, BtnGroup } from '@vt/btn'
+import { Table } from '@vt/table'
+import { search } from '@vt/search'
+import { HTableBc } from '@vt/table-bc'
 import Pagination from '@vt/pagination'
 import { Radio, RadioBtn, RadioGroup } from '@vt/radio'
 import { Checkbox, CheckboxBtn, CheckboxGroup } from '@vt/checkbox'
@@ -37,8 +39,8 @@ const components = [
   Code,
   Btn,
   BtnGroup,
-  TableColumn,
   Table,
+  search,
   Pagination,
   Radio,
   RadioBtn,
@@ -61,7 +63,8 @@ const components = [
   Nav,
   NavItem,
 
-  Particle
+  Particle,
+  HTableBc
 ]
 
 export default {

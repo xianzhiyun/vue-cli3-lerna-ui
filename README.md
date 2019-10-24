@@ -1,3 +1,6 @@
+[web界面](http://cnpm-web.proxy.vtstar.osc)
+[仓库地址](http://cnpm-registry.proxy.vtstar.osc )
+
 # vue-cli3-lerna-ui
 
 ## Project setup
@@ -75,9 +78,6 @@ npm publish
    * http://10.100.172.205:31908/
 admin 123456 zhangle@vtstar.net
 
-
-[web界面](http://cnpm-web.proxy.vtstar.osc)
-[仓库地址](http://cnpm-registry.proxy.vtstar.osc )
 
 npm使用
  * http://47.104.88.119:7002/
