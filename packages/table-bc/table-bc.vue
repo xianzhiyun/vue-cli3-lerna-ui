@@ -5,13 +5,15 @@
 	</div>
 </template>
 <script>
-// import HTable from '@vt/table/table.vue'
+import HTable from '@vt/table/table.vue'
+import VtSearch from '@vt/search/search.vue'
 
 export default {
     name: 'HTableBc',
-    // components: {
-    //     HTable
-    // },
+    components: {
+        HTable,
+        VtSearch
+    },
     data () {
         return {
             // 搜索配置项
