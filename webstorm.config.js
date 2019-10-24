@@ -1,14 +1,14 @@
-const path = require('path')
-
-function resolve (dir) {
-  return path.join(__dirname, dir)
-}
-
-module.exports = {
-  resolve: {
-    alias: {
-      '@': resolve('src'),
-      '@vt': resolve('packages'),
-    }
-  }
-}
+// const path = require('path')
+//
+// function resolve (dir) {
+//   return path.join(__dirname, dir)
+// }
+//
+// module.exports = {
+//   resolve: {
+//     alias: {
+//       '@': resolve('src'),
+//       '@P': resolve('packages'),
+//     }
+//   }
+// }

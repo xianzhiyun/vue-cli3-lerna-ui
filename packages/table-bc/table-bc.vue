@@ -1,7 +1,14 @@
 <template>
 	<div>
-		<h-search :searchList=searchList></h-search>
-		<h-table :tableConfig="tableConfig"></h-table>
+		<h-search
+			:searchList=searchList
+			@searchData="searchData"
+			@reset="reset"
+		></h-search>
+		<h-table
+			:tableConfig="tableConfig"
+			@onSizeChange="onSizeChange"
+			@onCurrentChange="onCurrentChange"></h-table>
 	</div>
 </template>
 <script>
@@ -10,6 +17,9 @@ import HSearch from '@vt/search/search.vue'
 
 export default {
     name: 'HTableBc',
+    // 组件将不会把未被注册的props呈现为普通的HTML属性
+    // 不会在组件最外层div设置属性
+    inheritAttrs: false,
     components: {
         HTable,
         HSearch
@@ -42,14 +52,38 @@ export default {
                         slotName: 'oilnum',
                         'min-width': 140
                     }
-                ]
+                ],
+                pagination: {}
             }
         }
     },
-    // 组件将不会把未被注册的props呈现为普通的HTML属性
-    // 不会在组件最外层div设置属性
-    inheritAttrs: false,
     mounted () {},
-    methods: {}
+    methods: {
+        /**
+         * @method 搜索
+         */
+        searchData() {},
+		/**
+		* @method 重置
+		* */
+        reset () {},
+        /**
+         * @method 分页页数
+         * @description
+         */
+        onCurrentChange (val) {
+            this.tableConfig.pagination['current-page'] = val
+            // this.getTableList();
+        },
+
+        /**
+         * @method 分页个数
+         * @description
+         */
+        onSizeChange (val) {
+            this.tableConfig.pagination['page-size'] = val
+            // this.getTableList();
+        }
+    }
 }
 </script>
