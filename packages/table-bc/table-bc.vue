@@ -8,12 +8,14 @@
 		<h-table
 			:tableConfig="tableConfig"
 			@onSizeChange="onSizeChange"
-			@onCurrentChange="onCurrentChange"></h-table>
+			@onCurrentChange="onCurrentChange">
+		</h-table>
 	</div>
 </template>
 <script>
 import HTable from '@vt/table/table.vue'
 import HSearch from '@vt/search/search.vue'
+import axios from 'axios'
 
 export default {
     name: 'HTableBc',
@@ -32,57 +34,76 @@ export default {
             ],
             // 表格table数据配置项的
             tableConfig: {
+                loading: false,
                 // 表格数据
                 data: [
-                    {part: '主轴齿轮箱润滑'},
-                    {part: '丝杠与导轨润滑'},
-                    {part: '主轴与丝杠冷却'},
-                    {part: '油雾器'}
+                    {part: '主轴齿轮箱润滑'}
                 ],
                 // 列配置
                 columns: [
                     {
-                        label: '润滑部位',
-                        prop: 'part',
+                        label: 'id',
+                        prop: 'id',
                         'min-width': 140
                     },
                     {
-                        label: '油品号',
-                        prop: 'oilnum',
-                        slotName: 'oilnum',
+                        label: 'no',
+                        prop: 'no',
                         'min-width': 140
                     }
                 ],
-                pagination: {}
+                pagination: {
+                    total: 0, // 总页数
+                    'page-size': 10,
+                    'current-page': 1
+                }
             }
         }
     },
-    mounted () {},
+    mounted () {
+        // 第一次进行触发搜索
+        this.searchData()
+    },
     methods: {
         /**
          * @method 搜索
          */
-        searchData() {},
-		/**
-		* @method 重置
-		* */
-        reset () {},
+        searchData () {
+            this.getTableList()
+        },
+        getTableList () {
+            this.tableConfig.loading = true
+            let params = {
+                pageNum: this.tableConfig.pagination['current-page'],
+                pageSize: this.tableConfig.pagination['page-size']
+            }
+            axios({
+                method: 'GET',
+                url: `${process.env.VUE_APP_BASE_API}/SERVICE-BUSINESS/api/productionExecutionPlanning/page/planning`,
+                headers: {
+                    Authorization: 'Bearer 2e38e01d-a7da-4cfa-8a88-c31259f4db36'
+                },
+                params: {
+                    ...params
+                }
+            }).then((data) => {
+                let res = data.data.data
+                this.tableConfig.data = res.list
+                this.tableConfig.pagination.total = res.total
+                this.tableConfig.loading = false;
+            })
+        },
         /**
-         * @method 分页页数
-         * @description
-         */
+         * @method 重置
+         * */
+        reset () {},
         onCurrentChange (val) {
             this.tableConfig.pagination['current-page'] = val
-            // this.getTableList();
+            this.getTableList()
         },
-
-        /**
-         * @method 分页个数
-         * @description
-         */
         onSizeChange (val) {
             this.tableConfig.pagination['page-size'] = val
-            // this.getTableList();
+            this.getTableList()
         }
     }
 }

@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<el-table
+			v-loading="tableConfig.loading"
 			ref="CTable"
 			:data="tableConfig.data"
 			style="width: 100%"
@@ -92,10 +93,10 @@ export default {
         }
     }, // 不会在组件最外层div设置属性
     mounted () {
-        setTimeout(() => {
-            this.$refs.CTable.doLayout()
-            this.doLayout()
-        }, 1000)
+        // setTimeout(() => {
+        //     this.$refs.CTable.doLayout()
+        //     this.doLayout()
+        // }, 1000)
     },
     methods: {
         // Methods  处理table的方法
