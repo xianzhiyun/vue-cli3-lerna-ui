@@ -5,7 +5,7 @@ import Col from '@vt/col'
 /* 基础组件 */
 import Quote from '@vt/quote'
 import Code from '@vt/code'
-import  { Btn, BtnGroup } from '@vt/button'
+import  { Btn, BtnGroup } from '@vt/btn'
 import { Table } from '@vt/table'
 import { search } from '@vt/search'
 import { HTableBc } from '@vt/table-bc'
