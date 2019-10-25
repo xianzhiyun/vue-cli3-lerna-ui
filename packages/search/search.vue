@@ -1,8 +1,12 @@
 <template>
-	<div class="search-content">
-		<div
-			style="display: flex;justify-content: flex-end"
-		>
+	<div class="search-content" style="display: flex;justify-content: space-between">
+		<div class="content-left" style="display: flex;align-items: center">
+			<template>
+				<!-- 搜索左侧操作栏信息 -->
+				<slot name="searchLeft"/>
+			</template>
+		</div>
+		<div class="content-right">
 			<div
 				class="factor"
 				v-for="(item, index) in searchList"
@@ -166,13 +170,19 @@ export default {
 	}
 	
 	.search-content {
-		padding: 15px 0 0 0;
+		/*padding: 15px 0 0 0;*/
 		text-align: right;
 	}
 	
+	.content-right {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center
+	}
+	
 	.factor {
-		min-height: 36px;
-		margin-bottom: 10px;
+		height: 50px;
+		line-height: 50px;
 		display: flex;
 		align-items: center;
 	}

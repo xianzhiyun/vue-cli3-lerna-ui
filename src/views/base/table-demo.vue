@@ -5,6 +5,17 @@
             <h-table-bc
 				:searchList="searchList"
 				:tableConfig="tableConfig">
+				<template #searchLeft>
+					<el-button
+						type="primary"
+						size="small"
+						icon="el-icon-search"
+					>搜 索
+					</el-button>
+				</template>
+				<template #no="{scope}">
+					{{'>>>>'}}-{{scope.row.no}}
+				</template>
 			</h-table-bc>
 		</div>
 		<h3>参数示例</h3>
@@ -23,6 +34,8 @@ export default {
             ],
             // 表格table数据配置项的
             tableConfig: {
+                url: `${process.env.VUE_APP_BASE_API}/SERVICE-BUSINESS/api/productionExecutionPlanning/page/planning`,
+				params: {},
                 loading: false,
                 // 表格数据
                 data: [
@@ -38,6 +51,7 @@ export default {
                     {
                         label: 'no',
                         prop: 'no',
+                        slotName: 'no',
                         'min-width': 140
                     }
                 ],

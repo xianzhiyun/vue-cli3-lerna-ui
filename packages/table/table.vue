@@ -10,13 +10,13 @@
 			v-on="setTableEvent()"
 		>
 			<template v-for="(item, index) in tableConfig.columns">
-				<!-- 特殊列 如 多选 序号 -->
+				<!-- 1. 特殊列 如 多选 序号 -->
 				<el-table-column
 					v-if="item.hasOwnProperty('type') &&(item.type === 'selection' || item.type === 'index')"
 					:key="index"
 					v-bind="getColBind(item)"
 				/>
-				<!-- 展开行  -->
+				<!-- 2、 展开行  -->
 				<el-table-column
 					v-else-if="item.hasOwnProperty('type') && item.type === 'expand'"
 					:key="index"
@@ -29,13 +29,13 @@
 						/>
 					</template>
 				</el-table-column>
-				<!-- 存在formatter 格式化内容的列 -->
+				<!-- 3、 存在formatter 格式化内容的列 -->
 				<el-table-column
 					v-else-if="item.formatter"
 					:key="index"
 					v-bind="getColBind(item)"
 				/>
-				<!-- 插槽 -->
+				<!-- 4、插槽 -->
 				<el-table-column
 					v-else-if="item.slotName"
 					:key="index"
@@ -44,11 +44,11 @@
 					<template slot-scope="scope">
 						<slot
 							:name="item.slotName"
-							:data="scope"
+							:scope="scope"
 						/>
 					</template>
 				</el-table-column>
-				<!-- 普通列 -->
+				<!-- 4、普通列 -->
 				<el-table-column
 					v-else
 					:key="index"
