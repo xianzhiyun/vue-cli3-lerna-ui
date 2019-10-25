@@ -6,8 +6,9 @@ function resolve (dir) {
 }
 
 module.exports = {
-    publicPath: '/vue-cli3-lerna-ui/',
-
+    publicPath: "./",
+    outputDir: "dist",
+    assetsDir: "static",
     transpileDependencies: [
         /@vt/
     ],

@@ -56,7 +56,7 @@ export default {
         return {}
     },
     mounted () {
-        // 第一次进行触发搜索
+        // 第一次进行触发搜索,发布测试
         this.getTableList()
     },
     methods: {
@@ -78,7 +78,7 @@ export default {
                 method: 'GET',
                 url: this.tableConfig.url,
                 headers: {
-                    Authorization: 'Bearer db35d398-7624-4534-9299-be5b4b1fd386'
+                    Authorization: 'Bearer 8d3c5d20-a49f-4e80-b71c-ab4597d516a1'
                 },
                 params: {
                     ...params

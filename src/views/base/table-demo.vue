@@ -9,12 +9,11 @@
 					<el-button
 						type="primary"
 						size="small"
-						icon="el-icon-search"
-					>搜 索
+					>添加
 					</el-button>
 				</template>
 				<template #no="{scope}">
-					{{'>>>>'}}-{{scope.row.no}}
+					{{scope.row.no}}
 				</template>
 			</h-table-bc>
 		</div>
