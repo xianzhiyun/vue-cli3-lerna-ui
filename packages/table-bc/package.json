@@ -1,11 +1,11 @@
 {
   "name": "@vt/table-bc",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "业务组件",
   "main": "index.js",
   "author": "zhangle",
   "license": "ISC",
   "dependencies": {
-    "@vt/search": "^1.0.8"
+    "@vt/search": "^1.0.9"
   }
 }

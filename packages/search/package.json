@@ -1,6 +1,6 @@
 {
   "name": "@vt/search",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "简单版搜索组件",
   "main": "index.js",
   "author": "zhangle",
